@@ -2,7 +2,7 @@ import serial
 import time
 
 class ArduinoHandler:
-    def __init__(self, port='COM10', baudrate=9600):
+    def __init__(self, port='COM3', baudrate=9600):
         # เปิดการเชื่อมต่อกับ Arduino ผ่านพอร์ตที่กำหนด
         self.arduino = serial.Serial(port=port, baudrate=baudrate, timeout=1)
     

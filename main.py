@@ -7,13 +7,14 @@ from light_control import LightControl
 
 if __name__ == '__main__':
     # สร้าง object
-    camera = CameraHandler('hand3.avi', 30, '720p')
+    camera = CameraHandler('hand.avi', 30, '1080p')
     hand_proc = HandProcessing()
     arduino = ArduinoHandler()
     light_ctrl = LightControl(arduino)
 
+
     # Start camera
-    cam, out = camera.record(0)
+    cam, out = camera.record(1)
     hand_proc.initialize_hand_detection()
 
     def camera_loop():
